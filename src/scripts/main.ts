@@ -12,6 +12,9 @@ const result = document.getElementById("result") as HTMLElement;
 function update() {
   let flags = "";
   switch (version.value) {
+    case "24":
+      flags = "-XX:+UseZGC";
+      break;
     case "21":
       flags = "-XX:+UseZGC -XX:+ZGenerational";
       break;
